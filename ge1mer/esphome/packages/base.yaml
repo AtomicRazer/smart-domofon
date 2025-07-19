@@ -7,11 +7,7 @@ esphome:
     version: "1.6.2"
   platformio_options:
     platform: platformio/espressif8266@4.2.1
-    build_flags:
-      - -DBEARSSL_SSL_BASIC
-      - -DPIO_FRAMEWORK_ARDUINO_MMU_CUSTOM=1
-      - -DMMU_IRAM_SIZE=0xC000
-      - -DMMU_ICACHE_SIZE=0x4000
+    build_flags: -DBEARSSL_SSL_BASIC -DPIO_FRAMEWORK_ARDUINO_MMU_CUSTOM=1 -DMMU_IRAM_SIZE=0xC000 -DMMU_ICACHE_SIZE=0x4000
   on_boot:
     priority: 600
     then:
